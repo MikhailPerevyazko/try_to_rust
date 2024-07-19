@@ -36,6 +36,7 @@ pub fn find_loop() {
 pub fn percent_count() -> f32 {
     let mut wanted_sum: String = String::new();
     let mut percent: String = String::new();
+    let mut period: String = String::new();
 
     println!("Введите желаемую сумму в месяц:");
     io::stdin()
@@ -45,16 +46,20 @@ pub fn percent_count() -> f32 {
     io::stdin()
         .read_line(&mut percent)
         .expect("Вы ввели неправильынй процент!");
+    io::stdin()
+        .read_line(&mut period)
+        .expect("Вы ввели неправильный период!");
 
     let cut_wanted_sum: String = wanted_sum
         .trim()
         .parse()
         .expect("Введите корректную сумму!");
-
     let cut_percent: String = percent.trim().parse().expect("Введите корректный процент!");
+    let cut_period: String = period.trim().parse().expect("Введите корректный период!!");
 
     let parsed_wanted_sum = cut_wanted_sum.parse::<f32>().unwrap();
     let parsed_percent = cut_percent.parse::<f32>().unwrap();
+    let parsed_period = cut_period.parse::<f32>().unwrap();
 
     let sum: f32 = (parsed_wanted_sum * 12.00) / (parsed_percent / 100.00);
     let ceil_sum = sum.ceil();
