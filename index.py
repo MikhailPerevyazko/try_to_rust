@@ -71,3 +71,5 @@ special_list = set(int_list)
 print(special_list)
 print(min(special_list))
 print(max(special_list))
+
+

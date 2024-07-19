@@ -5,5 +5,8 @@ def sum(a, b):
     x = ((a * 12) / (b / 100))
     rounded_x = round(x, 2)
     print('Сумма на вкладе должна быть: ', rounded_x, ' рублей.')
+    return rounded_x
 
 sum(wanted_sum, procent)
+
+
