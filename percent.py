@@ -1,8 +1,8 @@
-started_summ = 360000
-percent = 14
+started_summ = int(input("Введите начальную сумму: "))
+percent = float(input("Введите процент вклада: "))
 capitalization = 0
-mounths = 6
-added_sum = 40000
+mounths = int(input("Введите срок вклада в месяцах: "))
+added_sum = int(input("Введите на какую сумму будете ежемесячно пополнять вклад: "))
 end_summ = started_summ
 
 def count(started_summ,percent,capitalization,mounths,added_sum,end_summ):
