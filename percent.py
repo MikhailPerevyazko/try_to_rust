@@ -14,5 +14,6 @@ def count(started_summ,percent,capitalization,mounths,added_sum,end_summ):
         started_summ = end_summ + added_sum
         mounth += 1
         print(f"В конце {mounth} месяца:" ,end_summ)
+    return end_summ
 
 count(started_summ, percent, capitalization, mounths, added_sum, end_summ)
