@@ -55,11 +55,11 @@ pub fn percent_count() -> f32 {
         .parse()
         .expect("Введите корректную сумму!");
     let cut_percent: String = percent.trim().parse().expect("Введите корректный процент!");
-    let cut_period: String = period.trim().parse().expect("Введите корректный период!!");
+    //let cut_period: String = period.trim().parse().expect("Введите корректный период!!");
 
     let parsed_wanted_sum = cut_wanted_sum.parse::<f32>().unwrap();
     let parsed_percent = cut_percent.parse::<f32>().unwrap();
-    let parsed_period = cut_period.parse::<f32>().unwrap();
+    //let parsed_period = cut_period.parse::<f32>().unwrap();
 
     let sum: f32 = (parsed_wanted_sum * 12.00) / (parsed_percent / 100.00);
     let ceil_sum = sum.ceil();
