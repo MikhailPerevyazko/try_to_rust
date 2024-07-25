@@ -1,60 +1,67 @@
-use if_else_if_else::{find_loop, infinity_loop, learning, percent_count};
+struct Car {
+    year: i32,
+    model: String,
+    company: String,
+}
 
-mod if_else_if_else;
+enum Species {
+    Crab,
+    Fish,
+}
+
+enum Weapons {
+    Teeth,
+    Nails,
+}
+
+struct SeaCreature {
+    species: Species,
+    name: String,
+    weapon: Weapons,
+}
 
 fn main() {
-    //?repeat rust basics
-    let x: i32 = 13; // тип данных i32
-    println!("{}", x);
+    let car_one = Car {
+        year: 2008,
+        model: "i8".to_string(),
+        company: "BMW".to_string(),
+    };
+    let car_two = Car {
+        year: 2010,
+        model: "a4".to_string(),
+        company: "Audi".to_string(),
+    };
 
-    let y: f32 = 3.14159;
-    println!("{}", y);
-
-    fn float_num(num: f32) {
-        let new_num: f32 = num + 4.56;
-        println!("{}", new_num);
-    }
-    float_num(y);
-
-    let mut z: i32; // mutable переменная
-    z = 0;
-    println!("{}", z);
-    z = 1;
-    println!("{}", z);
-
-    let a: u8 = 3;
-    let b: i32 = 2 + a as i32;
-    println!("{}", b);
-
-    let array_nums: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("{:#?}", array_nums);
-
-    fn add(x: i32, y: i32) -> i32 {
-        println!("{}", x + y);
-        return x + y;
-    }
-    add(20, 40);
-
-    fn make_nothing() -> () {
-        return ();
-    }
-
-    make_nothing();
-    let a = make_nothing();
-    println!("The value of a: {:?}.", a);
-
-    fn make_tuple(a: i32, b: i32) -> (i32, i32) {
-        return (a, b);
-    }
-
-    let tuple: (i32, i32) = make_tuple(123, 456);
     println!(
-        "First value of tuple: {}. Second valeu of tuple: {}",
-        tuple.0, tuple.1
+        "First car: model is {}, year - {}, company is {}.",
+        car_one.model, car_one.year, car_one.company
+    );
+    println!(
+        "Second car: model is {}, year - {}, company is {}.",
+        car_two.model, car_two.year, car_two.company
     );
 
-    learning();
-    infinity_loop();
-    find_loop();
-    percent_count();
+    let ferries = SeaCreature {
+        species: Species::Crab,
+        name: String::from("Ferries"),
+        weapon: Weapons::Nails,
+    };
+    let dori = SeaCreature {
+        species: Species::Fish,
+        name: String::from("Dori"),
+        weapon: Weapons::Teeth,
+    };
+
+    match ferries.species {
+        Species::Crab => println!(
+            "{} is a crab! His weapon is {}.",
+            ferries.name, ferries.weapon
+        ),
+        Species::Fish => println!("{} is a fish!", ferries.name),
+    }
+
+    match dori.species {
+        Species::Crab => println!("{} is a crab!", dori.name),
+        Species::Fish => println!("{} is a fish!", dori.name),
+    }
 }
