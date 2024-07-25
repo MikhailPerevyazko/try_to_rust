@@ -53,10 +53,7 @@ fn main() {
     };
 
     match ferries.species {
-        Species::Crab => println!(
-            "{} is a crab! His weapon is {}.",
-            ferries.name, ferries.weapon
-        ),
+        Species::Crab => println!("{} is a crab!", ferries.name),
         Species::Fish => println!("{} is a fish!", ferries.name),
     }
 
