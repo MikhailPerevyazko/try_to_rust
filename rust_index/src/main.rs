@@ -61,4 +61,14 @@ fn main() {
         Species::Crab => println!("{} is a crab!", dori.name),
         Species::Fish => println!("{} is a fish!", dori.name),
     }
+
+    match ferries.weapon {
+        Weapons::Nails => println!("Nails is a crab's weapon!"),
+        Weapons::Teeth => println!("Teeth is a fish's weapon!"),
+    }
+
+    match dori.weapon {
+        Weapons::Nails => println!("Nails is a crab's weapon!"),
+        Weapons::Teeth => println!("Teeth is a fish's weapon!"),
+    }
 }

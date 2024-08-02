@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+import datetime
 
 @dataclass
 class Card:
@@ -73,3 +73,26 @@ print(min(special_list))
 print(max(special_list))
 
 
+long_string = "Someeeeeeeeeeeeeeeeeeeeeeeeeeeeee text"\
+              "span"
+
+print(long_string)
+
+#Get current date and time
+current_time = datetime.datetime.now()
+print(current_time)
+
+
+class Country():
+    popullation = 100
+    men = 50
+    women = 50
+    
+
+class City(Country):
+    def name(self):
+        pass
+    def age(self):
+        pass
+    def work(self):
+        pass
