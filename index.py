@@ -96,3 +96,14 @@ class City(Country):
         pass
     def work(self):
         pass
+
+
+nums = [1, 2, 3, 4, 5]
+new_nums = []
+for num in nums:
+    new_nums.append(num**2)
+
+print(new_nums)
+
+for i, v in enumerate(['a', 'b', 'c', 'd', 'e']):
+    print(i, v)

@@ -17,7 +17,7 @@ def count(started_summ,percent,capitalization,mounths,added_sum,end_summ):
         capitalization = 0
         started_summ = end_summ + added_sum
         mounth += 1
-        print(f"В конце {mounth} месяца:" ,end_summ)
+        print(f"В конце {mounth} месяца:" ,started_summ)
         print(f"Общий % = {round(full_period_percent, 2)} руб. \n")
     return end_summ
 
