@@ -1,5 +1,5 @@
-///Структура, в которой хранятся введенные данные с клавиатуры.
 #[derive(Debug)]
+//Структура, хранящая данные дял вычислений.
 pub struct StorageCountData {
     pub started_sum: f32,
     pub percent: f32,
@@ -11,6 +11,7 @@ pub struct StorageCountData {
     pub end_sum: f32,
 }
 
+// Функция, создающая структуру.
 pub fn record_struct() -> StorageCountData {
     let sum: f32 = 385000.00;
     let count_info = StorageCountData {
