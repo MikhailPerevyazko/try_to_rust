@@ -29,7 +29,7 @@ fn input_data(comment: &str) -> String {
     return string_value;
 }
 
-// Функция, создающая структуру.
+// Функция, создающая структуру и записывающая в нее введенные данные.
 pub fn record_struct() -> StorageCountData {
     let input_started_sum = input_data("Введите размер вклада: ");
     let parsed_input_started_sum = input_started_sum.trim().parse::<f32>().unwrap();
