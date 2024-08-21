@@ -30,18 +30,18 @@ fn input_data(comment: &str) -> String {
 
 // Функция, создающая структуру и записывающая в нее введенные данные.
 pub fn record_struct() -> StorageCountData {
-    let input_started_sum = input_data("Введите размер вклада: ");
-    let input_percent = input_data("Введите % вклада: ");
-    let input_mounths = input_data("Введите срок вклада: ");
-    let input_added_sum = input_data("Введите ежемесячно пополняемую сумму: ");
+    let input_started_sum: String = input_data("Введите размер вклада: ");
+    let input_percent: String = input_data("Введите % вклада: ");
+    let input_mounths: String = input_data("Введите срок вклада: ");
+    let input_added_sum: String = input_data("Введите ежемесячно пополняемую сумму: ");
 
-    let parsed_input_started_sum = input_started_sum.trim().parse::<f32>().unwrap();
-    let parsed_input_percent = input_percent.trim().parse::<f32>().unwrap();
-    let parsed_input_mounths = input_mounths.trim().parse::<i32>().unwrap();
-    let parsed_input_added_sum = input_added_sum.trim().parse::<f32>().unwrap();
+    let parsed_input_started_sum: f32 = input_started_sum.trim().parse::<f32>().unwrap();
+    let parsed_input_percent: f32 = input_percent.trim().parse::<f32>().unwrap();
+    let parsed_input_mounths: i32 = input_mounths.trim().parse::<i32>().unwrap();
+    let parsed_input_added_sum: f32 = input_added_sum.trim().parse::<f32>().unwrap();
 
-    let sum: f32 = 385000.00;
-    let count_info = StorageCountData {
+    let sum: f32 = parsed_input_started_sum;
+    let count_info: StorageCountData = StorageCountData {
         started_sum: parsed_input_started_sum,
         percent: parsed_input_percent,
         mounths: parsed_input_mounths,
